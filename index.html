@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./script.js"></script>
+
+    <title>Age calculator app</title>
+  </head>
+  <body>
+    <div class="age-calculator" data-valid="true">
+      <div class="age-calculator-inputs">
+        <div class="age-calculator-input">
+          <label for="day-input" class="age-input-label">Day</label>
+          <input
+            type="number"
+            id="day-input"
+            class="age-input"
+            placeholder="DD"
+          />
+          <div class="age-input-error" id="day-error"></div>
+        </div>
+
+        <div class="age-calculator-input">
+          <label for="month-input" class="age-input-label">Month</label>
+          <input
+            type="number"
+            id="month-input"
+            class="age-input"
+            placeholder="MM"
+          />
+          <div class="age-input-error" id="month-error"></div>
+        </div>
+
+        <div class="age-calculator-input">
+          <label for="year-input" class="age-input-label">Year</label>
+          <input
+            type="number"
+            id="year-input"
+            class="age-input"
+            placeholder="YYYY"
+          />
+          <div class="age-input-error" id="year-error"></div>
+        </div>
+      </div>
+
+      <div class="age-calculator-btn-wrapper">
+        <button type="button" class="age-calculator-btn">
+          <span class="text">Calculate</span>
+        </button>
+        <span aria-hidden="true" class="line"></span>
+      </div>
+
+      <output class="age-calculator-result">
+        <div class="age-calculator-result-text">
+          <span class="age-calculator-result-number" id="years-output">- -</span
+          ><span class="age-calculator-result-inner-text"> years</span>
+        </div>
+
+        <div class="age-calculator-result-text">
+          <span class="age-calculator-result-number" id="months-output"
+            >- -</span
+          ><span
+            class="age-calculator-result-inner-text"
+            id="months-output-inner-text"
+          >
+            months</span
+          >
+        </div>
+
+        <div class="age-calculator-result-text">
+          <span class="age-calculator-result-number" id="days-output">- -</span
+          ><span class="age-calculator-result-inner-text"> days</span>
+        </div>
+      </output>
+    </div>
+    <!-- Day DD Month MM Year YYYY -- years -- months -- days -->
+  </body>
+</html>
