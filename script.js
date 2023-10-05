@@ -27,7 +27,7 @@ const errors = [dayError, monthError, yearError];
 function getAge(year, month, day) {
   console.log([year, month, day]);
   const birthDate = DateTime.fromISO(
-    `${year}-${month.padStart(2, "0")}-${day}`
+    `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`
   );
   console.log(birthDate);
   const today = DateTime.now().startOf("day");
