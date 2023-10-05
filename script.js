@@ -27,7 +27,11 @@ const errors = [dayError, monthError, yearError];
 function getAge(year, month, day) {
   console.log([year, month, day]);
   const birthDate = DateTime.fromISO(
-    `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`
+    `${parseInt(year.toString()).toString()}-${parseInt(month)
+      .toString()
+      .padStart(2, "0")}-${parseInt(day.toString())
+      .toString()
+      .padStart(2, "0")}`
   );
   console.log(birthDate);
   const today = DateTime.now().startOf("day");
@@ -59,7 +63,10 @@ function displayAge(years, months, days) {
   const yearIsInTheFuture = year > DateTime.now().year;
   const monthIsInvalid = month < 1 || month > 12;
 
-  const monthDateInISOFormat = `${year}-${month
+  const monthDateInISOFormat = `${parseInt(
+    year.toString()
+  ).toString()}-${parseInt(month.toString())
+    .toString()
     .toString()
     .padStart(2, "0")}-01`;
   const daysInMonth =
